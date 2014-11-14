@@ -1,0 +1,17 @@
+{
+  "name": "c-fu",
+  "version": "0.0.0",
+  "authors": [
+    "Marco Au <marco.au.321@gmail.com>"
+  ],
+  "description": "uber for craft-masters",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

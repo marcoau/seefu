@@ -1,0 +1,13 @@
+{
+  "name": "c-fu",
+  "version": "0.0.0",
+  "description": "uber for craft-masters",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
