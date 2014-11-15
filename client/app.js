@@ -1,7 +1,7 @@
-angular.module('app', [
+var app = angular.module('app', [
   'ui.router',
   'app.user',
-  
+
   'app.home',
   'app.supplier'
 ])
@@ -25,5 +25,6 @@ angular.module('app', [
   $urlRouterProvider.otherwise('/');
 }])
 .controller('AppController', ['$scope', function($scope) {
-
+  $scope.socket = io.connect('/');
+  $scope.socket.emit('hello', {data: 'hey yo'});
 }]);

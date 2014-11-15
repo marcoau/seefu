@@ -1,16 +1,7 @@
 angular.module('app.home', [])
-.controller('HomeController', ['$scope', function($scope) {
-  $scope.userLogin = function(user) {
-    console.log(user);
-  };
-  $scope.supplierLogin = function(supplier) {
-    console.log(supplier);
-  };
-  $scope.userSignup = function(user) {
-    console.log(user);
-  };
-  $scope.supplierSignup = function(supplier) {
-    console.log(supplier);
-  };
-
+.controller('HomeController', ['$scope', 'UserFactory', function($scope, UserFactory) {
+  $scope.userLogin = UserFactory.userLogin;
+  $scope.supplierLogin = UserFactory.supplierLogin;
+  $scope.userSignup = UserFactory.userSignup;
+  $scope.supplierSignup = UserFactory.supplierSignup;
 }]);

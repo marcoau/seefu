@@ -4,11 +4,12 @@
   <title>C-FU</title>
   <link rel='stylesheet' href='app.css'>
 </head>
-<body>
+<body ng-controller='AppController'>
   <ui-view></ui-view>
 
   <script src='lib/angular/angular.js'></script>
   <script src='lib/angular-ui-router/release/angular-ui-router.js'></script>
+  <script src="/socket.io/socket.io.js"></script>
 
   <script src='app.js'></script>
   <script src='shared/user/user.js'></script>
