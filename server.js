@@ -1,9 +1,11 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 
 var app = express();
 var server = require('http').Server(app);
 var io = exports.io = require('socket.io')(server);
 
+app.use(bodyParser());
 app.use(express.static('./client'));
 // basic request logger
 app.use(function(req, res, next) {
