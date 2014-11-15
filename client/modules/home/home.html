@@ -1,2 +1,32 @@
-<h1>Home</h1>
-<h2>Home sweet home...</h2>
+<h1>C-Fu!!!</h1>
+<div>
+  <h2>Login</h2>
+  <form ng-submit='userLogin(user)'>
+    <h3>If you are a user...</h3>
+    <input type='text' ng-model='user.username'>
+    <input type='password' ng-model='user.password'>
+    <input type='submit' value='Login'>
+  </form>
+  <form ng-submit='supplierLogin(supplier)'>
+    <h3>If you are a c-fu...</h3>
+    <input type='text' ng-model='supplier.username'>
+    <input type='password' ng-model='supplier.password'>
+    <input type='submit' value='Login'>
+  </form>
+</div>
+
+<div>
+  <h2>Signup</h2>
+  <form ng-submit='userSignup(user)'>
+    <h3>If you are a user...</h3>
+    <input type='text' ng-model='user.username'>
+    <input type='password' ng-model='user.password'>
+    <input type='submit' value='Signup'>
+  </form>
+  <form ng-submit='supplierSignup(supplier)'>
+    <h3>If you are a c-fu...</h3>
+    <input type='text' ng-model='supplier.username'>
+    <input type='password' ng-model='supplier.password'>
+    <input type='submit' value='Signup'>
+  </form>
+</div>
