@@ -1,7 +1,8 @@
 angular.module('app', [
   'ui.router',
-  'app.home',
   'app.user',
+  
+  'app.home',
   'app.supplier'
 ])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
