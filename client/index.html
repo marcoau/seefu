@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='app'>
 <head>
   <title>C-FU</title>
 </head>
 <body>
-  <h1>Meet your C-Fu's!</h1>
+  <ui-view></ui-view>
 
   <script src='lib/angular/angular.js'></script>
+  <script src='lib/angular-ui-router/release/angular-ui-router.js'></script>
+
+  <script src='app.js'></script>
+  <script src='modules/home/home.js'></script>
+
 </body>
 </html>
