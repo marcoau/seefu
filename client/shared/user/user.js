@@ -1,5 +1,5 @@
 // angular.module('app.user', [])
-app.factory('UserFactory', ['$http', function($http) {
+app.factory('UserFactory', ['$http', '$state', function($http, $state) {
 
   var userSignup = function(user) {
     $http.post('/signup', { user: user, type: 'user' })
@@ -20,16 +20,30 @@ app.factory('UserFactory', ['$http', function($http) {
       });
   };
   var userLogin = function(user) {
-
+    $http.post('/login', { user: user, type: 'user' })
+      .success(function(data) {
+        console.log(data);
+        $state.go('user');
+      })
+      .error(function(err) {
+        console.error(err);
+      });
   };
   var supplierLogin = function(supplier) {
-
+    $http.post('/login', { user: supplier, type: 'supplier' })
+      .success(function(data) {
+        console.log(data);
+        $state.go('supplier');
+      })
+      .error(function(err) {
+        console.error(err);
+      });
   };
 
   return {
     userSignup: userSignup,
-    userLogin: userLogin,
     supplierSignup: supplierSignup,
+    userLogin: userLogin,
     supplierLogin: supplierLogin
   };
 
