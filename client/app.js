@@ -1,6 +1,8 @@
 angular.module('app', [
   'ui.router',
-  'app.home'
+  'app.home',
+  'app.user',
+  'app.supplier'
 ])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -8,6 +10,16 @@ angular.module('app', [
       url: '/',
       templateUrl: '/modules/home/home.html',
       controller: 'HomeController'
+    })
+    .state('user', {
+      url: '/user',
+      templateUrl: '/modules/user/user.html',
+      controller: 'UserController'
+    })
+    .state('supplier', {
+      url: '/supplier',
+      templateUrl: '/modules/supplier/supplier.html',
+      controller: 'SupplierController'
     });
   $urlRouterProvider.otherwise('/');
 }])
